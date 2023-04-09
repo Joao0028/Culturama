@@ -1,0 +1,163 @@
+
+/*Só sobre "Menu"*/
+.menu{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 33px;
+}
+
+@media (min-width: 720px){
+    .menu{
+        column-gap: 75px;
+    }
+}
+@media (min-width: 1420px){
+    
+    .menu{
+        column-gap: 105px;
+        flex-wrap: nowrap;
+    }
+    .menu__item:nth-child(1){
+        order: 1;
+    }
+    .menu__item:nth-child(2){
+        order: 3;
+    }
+    .menu__item:nth-child(3){
+        order: 4;
+    }
+    .menu__item:nth-child(4){
+        order: 5;
+    }
+    .menu__item:nth-child(5){
+        order: 2;
+    }
+}
+
+/*Só sobre "Lista"*/
+.categorias__lista {
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+}
+@media (min-width: 720px){
+    .categorias__lista{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+/*"Destaques"*/
+.destaques{
+    display: flex;
+    align-items: center;
+    column-gap: 35px;
+    white-space: nowrap;
+}
+.destaques__barra{
+    flex-grow: 1;
+}
+
+/*"Eventos"*/
+.eventos__lista{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.eventos__item{
+    flex-grow: 1;
+    max-width: 400px;
+}
+@media(min-width:720px){
+    .eventos__lista{
+        justify-content: flex-end;
+    }
+}
+
+/*"Agenda e horário"*/
+.agenda__botao{
+    margin: 20px 0 0 0;
+    text-align: center;
+}
+.agenda__atracao{
+    width: 55%;
+}
+.agenda__informacoes{
+    width: 45%;
+}
+.agenda__item{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0 0 0;
+}
+
+@media (min-width: 720px){
+
+    .agenda__botao{
+        margin: 20px 0 0 0;
+        text-align: end;
+    }
+    
+    .agenda__lista{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        flex-grow: 1;
+       justify-content: center;
+    }
+    .agenda__botao{
+        margin: 0 0 0 488px;
+    }
+}
+
+@media (min-width: 1420px){
+    .agenda__lista{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        flex-grow: 1;
+       justify-content: center;
+    }
+    .agenda__botao{
+        margin: 0 0 0 880px;
+    }
+}
+
+/*"Rodapé"*/
+.rodape{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.rodape__logo{
+    align-self: end;
+}
+
+
+
+
+
+
+/*align-self: end; - Uma otima opção para usar que faz alinhar os itens aonde aplicada...*/ 
+
+/*.menu__item:nth-child(1) - Quando queremos mudar a ordem sem mexer no html, utilizamos este componente: ".menu__item:nth-child()" e colocamos qual o item a ser mudado(1°,2°,3°...)  e em dentro dele "order: 1;" com a posição em que deseja que o elemento fique... "Tem que modificar todos!!!" */
+
+/*@media (min-width: 0px){} - Esta tag é utilizada para quando queremos adicionar uma configuração especifica para algum tipo de tela no css, ai é so colocar no width o tamanho minimo da tela */
+
+/* flex-grow: 1; - Quando aplicada em um item faz com que o item escolhido se ajuste quando a tela aumentar ou diminuir... mais ou menos isso... */
+/*white-space: nowrap; - Quando aplicada em um item faz com que o item escolhido telas maiores surgirem faz com que o item nao quebre para a linha abaixo*/
+
+/*flex-wrap:wrap - em conjunto com o display-flex,faz com que quando os itens de uma tela estejam colados um ao lado do outro, os que estiverem colados quebrem para a proxima linha sem deixar eles apertados (quando as telas forem menores ou não estiverem ajustadas ou bem "configuradas")*/
+/*flex-wrap:now-wrap - Ao contrário do "flex-wrap:wrap", ele força todos os itens ficarem na mesma linha */
+
+/*justify-content: space-evenly; - em conjunto com o display-flex faz com que o espaço entre os itens se adaptem, quando a tela aumentar ou diminuir...*/
+
+/*columm-gap: 0px; - faz com que o espaçamento vertical(cima e baixo) dos itens aumente ou diminua, com se fosse a margin porém para cima e baixo...*/
+/*row-gap: 0px; -  a propriedade row-gap serve para criar uma lacuna horizontal entre elementos(< e > ao contrario do columm-gap).*/
+/*gap: 0px - já quando utiliza somente a propriedade gap, ela irá criar espaçamentos tanto no sentido vertical quanto horizontal */
+
